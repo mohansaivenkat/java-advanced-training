@@ -1,87 +1,63 @@
-# Java Advanced Training Workspace
+# ☕ Java Advanced Training Workspace
 
 Welcome to the **Java Advanced Training Workspace**! This repository serves as a comprehensive collection of projects demonstrating advanced Java concepts, specifically focusing on **Database Connectivity**, **Unit Testing**, and **Object-Relational Mapping (ORM)**.
 
 ---
 
-## Overview
+## Highlighted Assignments
 
-This workspace is designed to guide developers through the essential layers of enterprise Java application development. Starting from core logic and unit testing, moving into direct database interaction with JDBC, and finally abstracting data persistence with Hibernate ORM.
+Here are the key assignments showcasing practical implementation of learned concepts:
+
+| Date | Project | Description | Tech Stack |
+| :--- | :--- | :--- | :--- |
+| **10 Feb 2026** |  **Product Management** | Full **CRUD** implementation for `Product` entities. Understands entity lifecycle and transaction management. | ![Hibernate](https://img.shields.io/badge/Hibernate-59666C?style=flat-square&logo=hibernate&logoColor=white) ![JPA](https://img.shields.io/badge/JPA-ED8B00?style=flat-square&logo=openjdk&logoColor=white) |
+| **11 Feb 2026** |  **Passport System** | Implements a **One-to-One Mapping** between `Person` and `Passport`.  Demonstrates relationship handling in ORM. | ![Hibernate](https://img.shields.io/badge/Hibernate-59666C?style=flat-square&logo=hibernate&logoColor=white) ![Relationships](https://img.shields.io/badge/Relation-111111?style=flat-square&logo=git&logoColor=white) |
+| **12 Feb 2026** |  **Student DAO** | A **Data Access Object (DAO)** pattern implementation for managing `Student` records. Focuses on clean architecture. | ![JDBC](https://img.shields.io/badge/JDBC-007396?style=flat-square&logo=java&logoColor=white) ![DAO](https://img.shields.io/badge/Pattern-DAO-blue?style=flat-square) |
 
 ---
 
-## Project Structure
+## Core Modules
 
-The workspace is organized into three main Maven modules:
+The workspace is structured into three main learning tracks:
 
-```text
-java-advanced-workspace
- ├── basicsofjdbc       # Java Logic, Algorithms & JUnit Testing
- ├── learnjdbc          # Pure JDBC Connectivity with PostgreSQL
- └── basicsofhibernate  # Hibernate ORM, Entity Mapping & CRUD
-```
+### 1.  Logic & Testing (`basicsofjdbc`)
+**Focus:** Pure Java Logic & JUnit 5 Testing
+
+Foundational module for writing robust Java code and validating it.
+- **Key Concepts**: Algorithms, String Manipulation, Mathematical Logic.
+- **Testing**: Comprehensive Unit Tests with **JUnit 5**.
+- **Tech**: ![Java](https://img.shields.io/badge/Java-ED8B00?style=flat-square&logo=openjdk&logoColor=white) ![JUnit5](https://img.shields.io/badge/JUnit5-25A162?style=flat-square&logo=junit5&logoColor=white)
+
+### 2. Pure JDBC (`learnjdbc`)
+**Focus:** Direct Database Connectivity
+
+bridges the gap between Java applications and the Database using raw SQL.
+- **Key Concepts**: Connection Lifecycle, `Statement` vs `PreparedStatement`, `ResultSet` handling.
+- **Features**: Full CRUD operations on `Employee` and `Student` data.
+- **Tech**: ![Java](https://img.shields.io/badge/Java-ED8B00?style=flat-square&logo=openjdk&logoColor=white) ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=flat-square&logo=postgresql&logoColor=white) ![JDBC](https://img.shields.io/badge/JDBC-007396?style=flat-square&logo=java&logoColor=white)
+
+### 3.  ORM & Hibernate (`basicsofhibernate`)
+**Focus:** Enterprise Data Persistence
+
+Advanced module moving away from raw SQL to Object-Relational Mapping (ORM).
+- **Key Concepts**: Entity Mapping, JPA Annotations, HQL/JPQL, Relationships (One-to-One, etc.).
+- **Features**: 
+  - `Student`, `Product`, `Passport` entities.
+  - CRUD operations using `EntityManager`.
+- **Tech**: ![Hibernate](https://img.shields.io/badge/Hibernate-59666C?style=flat-square&logo=hibernate&logoColor=white) ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=flat-square&logo=postgresql&logoColor=white)
 
 ---
 
 ## Technologies Used
 
-![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white)
-![Hibernate](https://img.shields.io/badge/Hibernate-59666C?style=for-the-badge&logo=hibernate&logoColor=white)
-![Maven](https://img.shields.io/badge/Maven-C71A36?style=for-the-badge&logo=apachemaven&logoColor=white)
-![JUnit5](https://img.shields.io/badge/JUnit5-25A162?style=for-the-badge&logo=junit5&logoColor=white)
-![Eclipse](https://img.shields.io/badge/Eclipse-2C2255?style=for-the-badge&logo=eclipseide&logoColor=white)
-
----
-
-## Detailed Project Breakdown
-
-### Java Basics & Testing (`basicsofjdbc`)
-
-**Focus:** Java Core Logic & Unit Testing
-
-Despite the name, this module currently serves as the foundation for writing robust Java logic and validating it with JUnit 5. It includes algorithmic challenges and domain logic examples.
-
-- **Key Components:**
-  - `Calculator.java`: Mathematical operations utility.
-  - `Factorial.java`: Logic for calculating factorials.
-  - `Palindrome.java`: String manipulation and verification.
-  - `User.java`: Entry point for testing various logic.
-- **Testing:**
-  - Comprehensive unit tests using **JUnit 5**.
-  - Demonstrates assertions and test lifecycle management.
-
-### JDBC Implementation (`learnjdbc`)
-
-**Focus:** Direct Database Connectivity (JDBC)
-
-This module bridges the gap between Java applications and the Database. It uses raw JDBC to execute SQL queries, handle connections, and manage result sets.
-
-- **Key Components:**
-  - `StepsToConnectDatabase.java`: Guide and implementation of the database connection lifecycle.
-  - `FetchStudentData.java`: Retrieving records from the database.
-  - `EmployeeCRUD_operations.java`: Full Create, Read, Update, Delete operations on Employee data.
-- **Tech Stack:**
-  - **PostgreSQL Driver** (`42.6.0`): For connecting to the Postgres database.
-  - **JUnit 5**: For testing logic where applicable.
-
-### Hibernate ORM (`basicsofhibernate`)
-
-**Focus:** Enterprise ORM with Hibernate
-
-The most advanced module in this workspace, moving away from raw SQL to Object-Relational Mapping. It manages data as Java objects (Entities).
-
-- **Key Components:**
-  - **CRUD Operations**:
-    - `Demo1AddStudent.java` to `Demo4GetStudent.java`: Step-by-step CRUD examples.
-    - `ProductCRUD.java` & `PersonCRUD.java`: Domain-specific data management.
-  - **Entity Mapping**:
-    - `Student.java`, `Product.java`, `Passport.java`, `Person.java`: Java classes mapped to database tables using JPA annotations.
-  - **Relationships**:
-    - Demonstrates One-to-One and other mapping strategies (e.g., `Person` ↔ `Passport`).
-- **Tech Stack:**
-  - **Hibernate Core** (`5.6.15.Final`): The ORM engine.
-  - **PostgreSQL Driver**: Underlying database connectivity.
+| Technology | Badge |
+| :--- | :--- |
+| **Java 17+** | ![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white) |
+| **PostgreSQL** | ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white) |
+| **Hibernate** | ![Hibernate](https://img.shields.io/badge/Hibernate-59666C?style=for-the-badge&logo=hibernate&logoColor=white) |
+| **Maven** | ![Maven](https://img.shields.io/badge/Maven-C71A36?style=for-the-badge&logo=apachemaven&logoColor=white) |
+| **JUnit 5** | ![JUnit5](https://img.shields.io/badge/JUnit5-25A162?style=for-the-badge&logo=junit5&logoColor=white) |
+| **Eclipse IDE** | ![Eclipse](https://img.shields.io/badge/Eclipse-2C2255?style=for-the-badge&logo=eclipseide&logoColor=white) |
 
 ---
 
@@ -91,9 +67,9 @@ The most advanced module in this workspace, moving away from raw SQL to Object-R
 
 Ensure you have the following installed on your system:
 
-- **Java Development Kit (JDK) 17+**
-- **Apache Maven 3.6+**
-- **PostgreSQL Database**
+-  **Java Development Kit (JDK) 17+**
+-  **Apache Maven 3.6+**
+-  **PostgreSQL Database**
 
 ### Installation & Execution
 
@@ -103,17 +79,17 @@ Ensure you have the following installed on your system:
     cd java-advanced-workspace
     ```
 
-2.  **Build a Module**
-    Navigate to any project directory and build using Maven:
+2.  **Build a Project**
+    Navigate to any project directory (e.g., an assignment) and build:
     ```bash
-    cd basicsofhibernate
+    cd 10-Feb-2026-Assignment
     mvn clean install
     ```
 
 3.  **Run Locally**
-    - Ensure your PostgreSQL database is running.
-    - Update `hibernate.cfg.xml` or JDBC connection strings in the source code with your local DB credentials.
-    - Run the `main` method in any of the logic or demo files (where applicable).
+    - Ensure your **PostgreSQL** database is running.
+    - Update `hibernate.cfg.xml` or JDBC connection strings in `src/main/resources` or logic files.
+    - Run the `main` method in the respective `Main` or `CRUD` class.
 
 ---
-*Happy Coding!*
+*Happy Coding!* 

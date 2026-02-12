@@ -25,7 +25,7 @@ public class ProductCRUD {
 	public static void updateProducts(EntityTransaction et, EntityManager em,Integer id) {
 		Product product = em.find(Product.class, id);
 		
-		if(product != null) {
+		if(product != null) { 
 			product.setName("hero");
 			em.merge(product);
 			et.begin();
