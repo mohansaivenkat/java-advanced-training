@@ -31,8 +31,11 @@ public class ProgramsTest {
 	}
 	
 	@ParameterizedTest
-	@CsvFileSource()
-	public void addEvenOrOddTest(Integer num,String exp) {
-		assertEquals(exp, num);
+	@CsvFileSource(resources = "/input.csv",numLinesToSkip = 1)
+	public void addEvenOrOddTest(String num,String exp) {
+		assertEquals(exp, Programs.isEvenOrOdd(Integer.parseInt(num)));
 	}
+	
+	
+	
 }

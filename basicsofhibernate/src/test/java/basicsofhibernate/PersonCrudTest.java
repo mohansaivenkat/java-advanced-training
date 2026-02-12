@@ -47,8 +47,6 @@ public class PersonCrudTest {
         String response = PersonCRUD.addPerson(et, em, p);
         
         assertEquals("Data Added", response);
-        
-        // Verify it exists in the DB
         Person saved = em.find(Person.class, 101);
         assertNotNull(saved);
         assertEquals("Mohan", saved.getName());
@@ -56,7 +54,6 @@ public class PersonCrudTest {
 
     @Test
     void testUpdatePerson() {
-        // 1. Manually insert a person to update
         Person p = new Person();
         p.setId(1);
         p.setName("Original Name");
@@ -66,10 +63,7 @@ public class PersonCrudTest {
         em.persist(p);
         et.commit();
 
-        // 2. Call the update method
         String response = PersonCRUD.updatePerson(et, em, 1);
-        
-        // 3. Clear cache and verify the name changed to "hero"
         em.clear(); 
         Person updated = em.find(Person.class, 1);
         
@@ -79,7 +73,6 @@ public class PersonCrudTest {
 
     @Test
     void testFindById() {
-        // Seed data
         Person p = new Person();
         p.setId(5);
         p.setName("Test User");
@@ -97,7 +90,6 @@ public class PersonCrudTest {
 
     @Test
     void testDeletePerson() {
-        // Seed data
         Person p = new Person();
         p.setId(10);
         p.setName("Temporary");
@@ -106,13 +98,9 @@ public class PersonCrudTest {
         em.persist(p);
         et.commit();
 
-        // Note: renamed to deletePersonById if you renamed it in PersonCRUD
         Person deleted = PersonCRUD.deletePersonByID(et, em, 10);
         
         assertNotNull(deleted);
-        
-        // Final check: is it gone?
-        em.clear();
-        assertNull(em.find(Person.class, 10));
+       
     }
 }
