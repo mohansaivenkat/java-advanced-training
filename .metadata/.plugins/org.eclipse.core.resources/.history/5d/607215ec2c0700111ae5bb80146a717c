@@ -1,0 +1,50 @@
+package basicsofhibernate;
+
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.EntityTransaction;
+import javax.persistence.Persistence;
+
+import org.junit.jupiter.api.Test;
+
+import com.product.Product;
+import com.product.ProductCRUD;
+
+public class ProductCrudTest {
+
+//	@Test
+	public void addProductTest() {
+		ProductCRUD crud = new ProductCRUD();
+		
+		EntityManagerFactory emf = Persistence.createEntityManagerFactory("postgres");
+		EntityManager em = emf.createEntityManager();
+		EntityTransaction et = em.getTransaction();
+		
+		Product p = new Product();
+		p.setId(102);
+		p.setName("Powder");
+		p.setPrice(90);
+		p.setQuantity(100);
+		
+		crud.addProducts(et, em,p);
+		
+		emf.close();
+	}
+	
+	
+	@Test
+	public void testFindByIDTest() {
+		
+		EntityManagerFactory emf = Persistence.createEntityManagerFactory("postgres");
+		EntityManager em = emf.createEntityManager();
+		EntityTransaction et = em.getTransaction();
+		
+		Product p = em.find(Product.class, 101);
+		
+		assertNotNull(p);
+		
+		
+	}
+}

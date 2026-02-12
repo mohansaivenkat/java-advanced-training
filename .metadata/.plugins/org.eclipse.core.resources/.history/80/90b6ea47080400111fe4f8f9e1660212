@@ -1,0 +1,9 @@
+package com.prac;
+
+public class CalculatorTest {
+
+	public void addTest() {
+		int res = Calculator.add(20, 30);
+	}
+
+}

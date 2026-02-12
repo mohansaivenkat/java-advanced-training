@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="ProductCrudTest" project="basicsofhibernate" tests="2" started="2" failures="0" errors="2" ignored="0">
+  <testsuite name="basicsofhibernate.ProductCrudTest" time="0.002" displayname="ProductCrudTest" uniqueid="[engine:junit-jupiter]/[class:basicsofhibernate.ProductCrudTest]">
+    <testcase name="testFindByIDTest" classname="basicsofhibernate.ProductCrudTest" time="0.001" displayname="testFindByIDTest()" uniqueid="[engine:junit-jupiter]/[class:basicsofhibernate.ProductCrudTest]/[method:testFindByIDTest()]">
+      <error>java.lang.NullPointerException
+	at basicsofhibernate.ProductCrudTest.&lt;init&gt;(ProductCrudTest.java:23)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at java.util.Optional.orElseGet(Optional.java:267)
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+
+</error>
+    </testcase>
+    <testcase name="addProductTest" classname="basicsofhibernate.ProductCrudTest" time="0.001" displayname="addProductTest()" uniqueid="[engine:junit-jupiter]/[class:basicsofhibernate.ProductCrudTest]/[method:addProductTest()]">
+      <error>java.lang.NullPointerException
+	at basicsofhibernate.ProductCrudTest.&lt;init&gt;(ProductCrudTest.java:23)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at java.util.Optional.orElseGet(Optional.java:267)
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+
+</error>
+    </testcase>
+  </testsuite>
+</testrun>

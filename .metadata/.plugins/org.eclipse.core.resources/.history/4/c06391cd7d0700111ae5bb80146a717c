@@ -1,0 +1,21 @@
+package com.assessments;
+
+import java.time.LocalDate;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
+public class Person {
+	
+	
+	@Id
+	private Integer id;
+	private String name;
+	private LocalDate dob;
+	private String address;
+	private String pincode;
+	
+	
+
+}

@@ -1,0 +1,61 @@
+package com.product;
+
+import java.util.List;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityTransaction;
+import javax.persistence.Query;
+
+public class ProductCRUD {
+	
+	public static void addProducts(EntityTransaction et, EntityManager em,Product p) {
+		
+		et.begin();
+		em.persist(p);
+		et.commit();
+		
+	}
+	
+	public static void updateProducts(EntityTransaction et, EntityManager em,Integer id) {
+		Product product = em.find(Product.class, id);
+		
+		if(product != null) {
+			product.setName("hero");
+			em.merge(product);
+			et.begin();
+			et.commit();
+		}
+			
+	}
+	
+	public static void deleteProducts(EntityTransaction et, EntityManager em,Integer id) {
+		Product p = em.find(Product.class, id);
+		
+		if(p != null) {			
+			et.begin();
+			em.remove(p);
+			et.commit();
+		}
+		else {
+			System.out.println("Data doesn't exist");
+		}
+	}
+	
+	public static Product findById(EntityTransaction et, EntityManager em) {
+		Product p = em.find(Product.class, 1);
+		System.out.println(p.getId() + " " + p.getName() + " " + p.getPrice());
+		return p;
+	}
+	
+	public static List<Product> findAllProduct(EntityTransaction et, EntityManager em) {
+		String jpql = "select p from Product p";
+		Query query = em.createQuery(jpql);
+		
+		List<Product> list = query.getResultList();
+		list.forEach(System.out::println);
+		
+		return list;
+		
+	}
+	
+}

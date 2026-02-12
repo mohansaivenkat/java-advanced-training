@@ -1,0 +1,31 @@
+package com.programs;
+
+public class Programs {
+
+	
+	public static Boolean isPalindrome(String str) {
+		StringBuilder rev = new StringBuilder(str);
+		rev.reverse();
+		
+		if(str.equals(rev.toString())) {
+			return true;
+		}
+		else {
+			return false;
+		}
+	}
+	
+	
+	public static Integer add(Integer a,Integer b) {
+		return a+b;
+	}
+	
+	public static Boolean isEvenOrOdd(Integer num) {
+		if(num%2==0) {
+			return true;
+		}
+		else {
+			return false;
+		}
+	}
+}
