@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><testrun name="PersonCrudTest" project="basicsofhibernate" tests="4" started="4" failures="0" errors="0" ignored="0">
-  <testsuite name="basicsofhibernate.PersonCrudTest" time="5.547" displayname="PersonCrudTest" uniqueid="[engine:junit-jupiter]/[class:basicsofhibernate.PersonCrudTest]">
-    <testcase name="testUpdatePerson" classname="basicsofhibernate.PersonCrudTest" time="4.544" displayname="testUpdatePerson()" uniqueid="[engine:junit-jupiter]/[class:basicsofhibernate.PersonCrudTest]/[method:testUpdatePerson()]"/>
-    <testcase name="testFindById" classname="basicsofhibernate.PersonCrudTest" time="0.354" displayname="testFindById()" uniqueid="[engine:junit-jupiter]/[class:basicsofhibernate.PersonCrudTest]/[method:testFindById()]"/>
-    <testcase name="testDeletePerson" classname="basicsofhibernate.PersonCrudTest" time="0.3" displayname="testDeletePerson()" uniqueid="[engine:junit-jupiter]/[class:basicsofhibernate.PersonCrudTest]/[method:testDeletePerson()]"/>
-    <testcase name="testAddPerson" classname="basicsofhibernate.PersonCrudTest" time="0.345" displayname="testAddPerson()" uniqueid="[engine:junit-jupiter]/[class:basicsofhibernate.PersonCrudTest]/[method:testAddPerson()]"/>
-  </testsuite>
-</testrun>

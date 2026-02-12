@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><testrun name="ProductCrudTest" project="basicsofhibernate" tests="1" started="1" failures="0" errors="0" ignored="0">
-  <testsuite name="basicsofhibernate.ProductCrudTest" time="1.805" displayname="ProductCrudTest" uniqueid="[engine:junit-jupiter]/[class:basicsofhibernate.ProductCrudTest]">
-    <testcase name="testFindByIDTest" classname="basicsofhibernate.ProductCrudTest" time="1.805" displayname="testFindByIDTest()" uniqueid="[engine:junit-jupiter]/[class:basicsofhibernate.ProductCrudTest]/[method:testFindByIDTest()]"/>
-  </testsuite>
-</testrun>

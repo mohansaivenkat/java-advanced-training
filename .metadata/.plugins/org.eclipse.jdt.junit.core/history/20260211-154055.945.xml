@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><testrun name="ProductCrudTest" project="basicsofhibernate" tests="4" started="4" failures="0" errors="0" ignored="0">
-  <testsuite name="basicsofhibernate.ProductCrudTest" time="0.198" displayname="ProductCrudTest" uniqueid="[engine:junit-jupiter]/[class:basicsofhibernate.ProductCrudTest]">
-    <testcase name="testFindByIDTest" classname="basicsofhibernate.ProductCrudTest" time="0.129" displayname="testFindByIDTest()" uniqueid="[engine:junit-jupiter]/[class:basicsofhibernate.ProductCrudTest]/[method:testFindByIDTest()]"/>
-    <testcase name="deleteById1" classname="basicsofhibernate.ProductCrudTest" time="0.057" displayname="deleteById1()" uniqueid="[engine:junit-jupiter]/[class:basicsofhibernate.ProductCrudTest]/[method:deleteById1()]"/>
-    <testcase name="deleteById2" classname="basicsofhibernate.ProductCrudTest" time="0.005" displayname="deleteById2()" uniqueid="[engine:junit-jupiter]/[class:basicsofhibernate.ProductCrudTest]/[method:deleteById2()]"/>
-    <testcase name="testFindByID2" classname="basicsofhibernate.ProductCrudTest" time="0.004" displayname="testFindByID2()" uniqueid="[engine:junit-jupiter]/[class:basicsofhibernate.ProductCrudTest]/[method:testFindByID2()]"/>
-  </testsuite>
-</testrun>

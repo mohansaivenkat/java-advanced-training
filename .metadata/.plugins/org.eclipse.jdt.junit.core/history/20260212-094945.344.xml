@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><testrun name="PalindromeTest (1)" project="basicsofhibernate" tests="3" started="3" failures="0" errors="0" ignored="0">
-  <testsuite name="basicsofhibernate.PalindromeTest" time="0.062" displayname="PalindromeTest" uniqueid="[engine:junit-jupiter]/[class:basicsofhibernate.PalindromeTest]">
-    <testsuite name="isPalindromeTest(basicsofhibernate.PalindromeTest)" time="0.062" displayname="isPalindromeTest(String)" parameters="java.lang.String" uniqueid="[engine:junit-jupiter]/[class:basicsofhibernate.PalindromeTest]/[test-template:isPalindromeTest(java.lang.String)]">
-      <testcase name="isPalindromeTest" classname="basicsofhibernate.PalindromeTest" time="0.062" dynamicTest="true" displayname="[1] tenet" parameters="java.lang.String" uniqueid="[engine:junit-jupiter]/[class:basicsofhibernate.PalindromeTest]/[test-template:isPalindromeTest(java.lang.String)]/[test-template-invocation:#1]"/>
-      <testcase name="isPalindromeTest" classname="basicsofhibernate.PalindromeTest" time="0.001" dynamicTest="true" displayname="[2] naman" parameters="java.lang.String" uniqueid="[engine:junit-jupiter]/[class:basicsofhibernate.PalindromeTest]/[test-template:isPalindromeTest(java.lang.String)]/[test-template-invocation:#2]"/>
-      <testcase name="isPalindromeTest" classname="basicsofhibernate.PalindromeTest" time="0.005" dynamicTest="true" displayname="[3] abba" parameters="java.lang.String" uniqueid="[engine:junit-jupiter]/[class:basicsofhibernate.PalindromeTest]/[test-template:isPalindromeTest(java.lang.String)]/[test-template-invocation:#3]"/>
-    </testsuite>
-  </testsuite>
-</testrun>
