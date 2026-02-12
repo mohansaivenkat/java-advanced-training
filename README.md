@@ -4,19 +4,6 @@ Welcome to the **Java Advanced Training Workspace**! This repository serves as a
 
 ---
 
-## Table of Contents
-
-- [Overview](#overview)
-- [Project Structure](#project-structure)
-- [Technologies Used](#technologies-used)
-- [Detailed Project Breakdown](#detailed-project-breakdown)
-  - [Java Basics & Testing](#java-basics--testing)
-  - [JDBC Implementation](#jdbc-implementation)
-  - [Hibernate ORM](#hibernate-orm)
-- [Getting Started](#getting-started)
-
----
-
 ## Overview
 
 This workspace is designed to guide developers through the essential layers of enterprise Java application development. Starting from core logic and unit testing, moving into direct database interaction with JDBC, and finally abstracting data persistence with Hibernate ORM.
@@ -112,7 +99,7 @@ Ensure you have the following installed on your system:
 
 1.  **Clone the Repository**
     ```bash
-    git clone <repository-url>
+    git clone https://github.com/mohansaivenkat/java-advanced-training.git
     cd java-advanced-workspace
     ```
 
