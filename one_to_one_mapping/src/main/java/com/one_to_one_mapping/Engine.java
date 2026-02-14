@@ -7,21 +7,22 @@ import javax.persistence.Id;
 public class Engine {
 	@Id
 	private int id;
-	private String ss;
+	private String cc;
 	String type;
 	String fuelType;
 	String mileage;
+	
 	public int getId() {
 		return id;
 	}
 	public void setId(int id) {
 		this.id = id;
 	}
-	public String getSs() {
-		return ss;
+	public String getCc() {
+		return cc;
 	}
-	public void setSs(String ss) {
-		this.ss = ss;
+	public void setCc(String cc) {
+		this.cc = cc;
 	}
 	public String getType() {
 		return type;
@@ -41,14 +42,7 @@ public class Engine {
 	public void setMileage(String mileage) {
 		this.mileage = mileage;
 	}
-	public Engine(int id, String ss, String type, String fuelType, String mileage) {
-		super();
-		this.id = id;
-		this.ss = ss;
-		this.type = type;
-		this.fuelType = fuelType;
-		this.mileage = mileage;
-	}
+	
 	
 	
 	

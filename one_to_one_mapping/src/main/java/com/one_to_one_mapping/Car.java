@@ -17,6 +17,14 @@ public class Car {
 	@OneToOne
 	private Engine engine;
 	
+	
+	
+	public Engine getEngine() {
+		return engine;
+	}
+	public void setEngine(Engine engine) {
+		this.engine = engine;
+	}
 	public int getId() {
 		return id;
 	}
@@ -48,14 +56,6 @@ public class Car {
 		this.modelYear = modelYear;
 	}
 	
-	public Car(int id, String brand, String model, double price, String modelYear) {
-		super();
-		this.id = id;
-		this.brand = brand;
-		this.model = model;
-		this.price = price;
-		this.modelYear = modelYear;
-	}
 	
 	
 	
