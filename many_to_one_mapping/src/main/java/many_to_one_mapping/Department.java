@@ -1,12 +1,17 @@
 package many_to_one_mapping;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.SequenceGenerator;
 
 @Entity
 public class Department {
 	
 	@Id
+	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "number_sequence")
+	@SequenceGenerator(initialValue = 100,allocationSize = 1,name = "number_sequence")
 	private Integer d_id;
 	private String name;
 	private String managerName;
