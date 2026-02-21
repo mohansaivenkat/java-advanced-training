@@ -102,7 +102,7 @@ public class Main {
 
 	    Main m = new Main();
 
-	    Users u1 = new Users(1,"Puneeth","123","puneeth@gmail.com");
+	    Users u1 = new Users(1,"Mohan","123","mohan@gmail.com");
 	    m.registerUser(u1);
 
 
