@@ -18,7 +18,7 @@ A comprehensive collection of Maven projects covering advanced Java concepts —
 Chronological list of all graded assignments, each building on concepts from the learning modules:
 
 | Date | Assignment Title | Entities / Focus | DB | Key Tech |
-|:-----|:----------------|:-----------------|:---|:---------|
+|:-----|:------------|:-----------|:---|:-------------|
 | **10 Feb 2026** | Product Management | `Product` — full Hibernate CRUD + `ProductCrudTest` (JUnit 5) | PostgreSQL | ![Hibernate](https://img.shields.io/badge/Hibernate-59666C?style=flat-square&logo=hibernate&logoColor=white) ![JUnit5](https://img.shields.io/badge/JUnit5-25A162?style=flat-square&logo=junit5&logoColor=white) |
 | **11 Feb 2026** | Passport System | `Person` + `Passport` — `@OneToOne` mapping, `PersonCrudTest` + `PassportCrudTest` | PostgreSQL | ![Hibernate](https://img.shields.io/badge/Hibernate-59666C?style=flat-square&logo=hibernate&logoColor=white) ![JUnit5](https://img.shields.io/badge/JUnit5-25A162?style=flat-square&logo=junit5&logoColor=white) |
 | **12 Feb 2026** | Student DAO (JDBC) | `Student` + `StudentDao` — DAO pattern over raw JDBC, `StudentDaoTest` | PostgreSQL | ![JDBC](https://img.shields.io/badge/JDBC-007396?style=flat-square&logo=java&logoColor=white) ![JUnit5](https://img.shields.io/badge/JUnit5-25A162?style=flat-square&logo=junit5&logoColor=white) |
