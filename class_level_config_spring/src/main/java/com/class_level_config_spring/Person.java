@@ -33,6 +33,10 @@ public class Person {
 		this.mobile = mobile;
 	}
 	
+	public void Person(Mobile mobile) {
+		this.mobile=mobile;
+	}
+	
 	
 
 }
