@@ -3,13 +3,14 @@
 ![Java](https://img.shields.io/badge/Java-17+-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
 ![Hibernate](https://img.shields.io/badge/Hibernate-5.6-59666C?style=for-the-badge&logo=hibernate&logoColor=white)
 ![Spring](https://img.shields.io/badge/Spring-5.x-6DB33F?style=for-the-badge&logo=spring&logoColor=white)
+![Spring Boot](https://img.shields.io/badge/Spring_Boot-4.0-6DB33F?style=for-the-badge&logo=springboot&logoColor=white)
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-14+-316192?style=for-the-badge&logo=postgresql&logoColor=white)
 ![MySQL](https://img.shields.io/badge/MySQL-8+-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
 ![Maven](https://img.shields.io/badge/Maven-3.6+-C71A36?style=for-the-badge&logo=apachemaven&logoColor=white)
 ![JUnit5](https://img.shields.io/badge/JUnit5-5.11-25A162?style=for-the-badge&logo=junit5&logoColor=white)
 ![Mockito](https://img.shields.io/badge/Mockito-5+-C5D9C8?style=for-the-badge)
 
-A comprehensive collection of Maven projects covering advanced Java concepts — from raw **JDBC** and **JUnit 5** unit testing through **Hibernate ORM**, **JPA entity relationships**, **Hibernate caching**, **Mockito** mocking, and **Spring Core** dependency injection.
+A comprehensive collection of Maven projects covering advanced Java concepts — from raw **JDBC** and **JUnit 5** unit testing through **Hibernate ORM**, **JPA entity relationships**, **Hibernate caching**, **Mockito** mocking, **Spring Core** dependency injection, and **Spring Boot** REST API development with **Spring Data JPA**.
 
 ---
 
@@ -29,6 +30,10 @@ Chronological list of all graded assignments, each building on concepts from the
 | **16 Feb 2026** | Social Media Posts | `Users`, `Post`, `Comments` — `@OneToMany` modelling a social feed | ![Hibernate](https://img.shields.io/badge/Hibernate-ORM-59666C?style=for-the-badge&logo=hibernate&logoColor=white) ![JPA](https://img.shields.io/badge/JPA-%40OneToMany-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white) |
 | **21 Feb 2026** | CRM Sales Management | `Customer`, `Lead`, `SalesEmployee`, `Product`, `Order`, `SupportTicket` — full service-layer with `CustomerService`, `LeadService`, `OrderService`, `TicketService`, `ReportService` | ![Hibernate](https://img.shields.io/badge/Hibernate-ORM-59666C?style=for-the-badge&logo=hibernate&logoColor=white) ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-Database-316192?style=for-the-badge&logo=postgresql&logoColor=white) |
 | **21 Feb 2026** | Hospital Management ERP | `Patient`, `MedicalRecord`, `Department`, `Doctor`, `Appointment`, `Prescription` — **all 5 JPA mapping types** covered across `CRUDTest1` through `CRUDTest5` | ![Hibernate](https://img.shields.io/badge/Hibernate-ORM-59666C?style=for-the-badge&logo=hibernate&logoColor=white) ![JPA](https://img.shields.io/badge/JPA-All_5_Mappings-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white) ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-Database-316192?style=for-the-badge&logo=postgresql&logoColor=white) |
+| **25 Feb 2026** | Smart Payment Processing System | `PaymentService`, `CreditCardPayment`, `UpiPayment`, `PaymentProcessor`, `TransactionLogger` — interface-based DI with `@Component`, `@Autowired`, `@Qualifier` | ![Spring](https://img.shields.io/badge/Spring-Core-6DB33F?style=for-the-badge&logo=spring&logoColor=white) ![Java](https://img.shields.io/badge/Java-DI-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white) |
+| **25 Feb 2026** | Online Food Delivery System | `OrderService`, `RestaurantService`, `DeliveryService`, `EmailNotification`, `SmsNotification` — `@Qualifier` constructor injection, `NotificationService` interface | ![Spring](https://img.shields.io/badge/Spring-Core-6DB33F?style=for-the-badge&logo=spring&logoColor=white) ![Java](https://img.shields.io/badge/Java-DI-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white) |
+| **25 Feb 2026** | Banking Loan Approval System | `LoanService`, `LoanValidator`, `CreditScoreValidator`, `IncomeValidator`, `AuditService` — `@Qualifier` + setter injection, validator pattern | ![Spring](https://img.shields.io/badge/Spring-Core-6DB33F?style=for-the-badge&logo=spring&logoColor=white) ![Java](https://img.shields.io/badge/Java-DI-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white) |
+| **26 Feb 2026** | Product & Category Management | `Product`, `Category` — `@OneToMany` JPA relationship, full REST API with `@RestController`, `CategoryService`, `ProductService`, `GlobalExceptionHandler`, pagination and sorting | ![Spring Boot](https://img.shields.io/badge/Spring_Boot-REST_API-6DB33F?style=for-the-badge&logo=springboot&logoColor=white) ![JPA](https://img.shields.io/badge/JPA-Spring_Data-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white) ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-Database-316192?style=for-the-badge&logo=postgresql&logoColor=white) |
 
 ---
 
@@ -231,6 +236,48 @@ Annotation-based Spring IoC using `@Configuration` + `AnnotationConfigApplicatio
 
 ---
 
+### Module 15 — Spring Boot Basics `basicsofspringboot`
+
+![Spring Boot](https://img.shields.io/badge/Spring_Boot-6DB33F?style=flat-square&logo=springboot&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=flat-square&logo=postgresql&logoColor=white)
+
+REST API development with Spring Boot, Spring Data JPA repositories, and custom exception handling.
+
+| File | Purpose |
+|:-----|:--------|
+| `BasicsofspringbootApplication.java` | Main Spring Boot entry point |
+| `DemoController.java` | REST controller — `Car` CRUD (POST, GET, PUT, PATCH, DELETE) + derived queries |
+| `CustomerController.java` | REST controller — `Customer` CRUD + find by email, name, age range, top 10 |
+| `Car.java` | JPA entity with `@OneToOne` to `Engine` |
+| `Engine.java` | JPA entity — engine details |
+| `Customer.java` | JPA entity — customer with name, email, age |
+| `Doctor.java` | JPA entity — doctor details |
+| `Cricketer.java` | Model class for JSON demos |
+| `CarJpaRepository.java` | Spring Data JPA repository — derived + custom query methods |
+| `CustomerJpaRepository.java` | Spring Data JPA repository — findByEmail, findByName, findByAgeBetween |
+| `CarDataDoesNotExistException.java` | Custom exception |
+| `ApplicationException.java` | `@ExceptionHandler` for global error handling |
+
+---
+
+### Module 16 — Spring + Hibernate Integration `spring_hibernate`
+
+![Spring](https://img.shields.io/badge/Spring-6DB33F?style=flat-square&logo=spring&logoColor=white)
+![Hibernate](https://img.shields.io/badge/Hibernate-59666C?style=flat-square&logo=hibernate&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=flat-square&logo=postgresql&logoColor=white)
+
+Spring `@Configuration` with JPA `EntityManager` bean — bridging Spring IoC and Hibernate persistence.
+
+| File | Purpose |
+|:-----|:--------|
+| `ProjectConfiguration.java` | `@Configuration` — creates `EntityManager` bean from `Persistence.createEntityManagerFactory` |
+| `Employee.java` | JPA entity (DTO) |
+| `EmployeeDao.java` | DAO layer — uses injected `EntityManager` for CRUD |
+| `EmployeeService.java` | Service layer — business logic over DAO |
+| `Main.java` | Bootstraps `AnnotationConfigApplicationContext`, inserts employees via Spring-managed beans |
+
+---
+
 ## Technologies Used
 
 | Technology | Purpose | Badge |
@@ -239,7 +286,8 @@ Annotation-based Spring IoC using `@Configuration` + `AnnotationConfigApplicatio
 | **Hibernate ORM 5.6** | JPA implementation, entity mapping, session management | ![Hibernate](https://img.shields.io/badge/Hibernate-5.6-59666C?style=for-the-badge&logo=hibernate&logoColor=white) |
 | **JPA 2.1** | Standard annotations: `@Entity`, `@OneToOne`, `@OneToMany`, `@ManyToMany` | ![JPA](https://img.shields.io/badge/JPA-2.1-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white) |
 | **Spring Core 5.x** | IoC container, XML config (`ClassPathXmlApplicationContext`), annotation config (`@Configuration`) | ![Spring](https://img.shields.io/badge/Spring-5.x-6DB33F?style=for-the-badge&logo=spring&logoColor=white) |
-| **PostgreSQL 14+** | Primary database for Hibernate and JDBC modules | ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-14+-316192?style=for-the-badge&logo=postgresql&logoColor=white) |
+| **Spring Boot 4.0** | REST API development, auto-configuration, Spring Data JPA, exception handling | ![Spring Boot](https://img.shields.io/badge/Spring_Boot-4.0-6DB33F?style=for-the-badge&logo=springboot&logoColor=white) |
+| **PostgreSQL 14+** | Primary database for Hibernate, JDBC, and Spring Boot modules | ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-14+-316192?style=for-the-badge&logo=postgresql&logoColor=white) |
 | **MySQL 8+** | Database for Case Study and Social Media assignments | ![MySQL](https://img.shields.io/badge/MySQL-8+-4479A1?style=for-the-badge&logo=mysql&logoColor=white) |
 | **Apache Maven 3.6+** | Build tool, dependency management | ![Maven](https://img.shields.io/badge/Maven-3.6+-C71A36?style=for-the-badge&logo=apachemaven&logoColor=white) |
 | **JUnit 5** | Unit testing framework | ![JUnit5](https://img.shields.io/badge/JUnit5-5.11-25A162?style=for-the-badge&logo=junit5&logoColor=white) |
@@ -293,6 +341,10 @@ java-advanced-workspace/
 |-- 16-Feb-Assignment/                         Assignment — Social Media Posts (Hibernate + MySQL)
 |-- 21-Feb-Assignment-crm_sales_management_system/    Assignment — CRM Sales ERP (Hibernate + PostgreSQL)
 |-- 21-Feb-Assignment-hospitalManagementSystemERP/    Assignment — Hospital ERP, all 5 JPA mappings (Hibernate + PostgreSQL)
+|-- 25-Feb-Assignment-CaseStudy1-SmartPaymentProcessingSystem/    Assignment — Smart Payment (Spring Core DI)
+|-- 25-Feb-Assignment-CaseStudy2-OnlineFoodDeliverySystem/        Assignment — Food Delivery (Spring Core DI)
+|-- 25-Feb-Assignment-CaseStudy3-BankingLoanApprovalSystem/       Assignment — Banking Loan (Spring Core DI)
+|-- 26-Feb-Assignment-CaseStudy-ProductCategoryManagement/        Assignment — Product & Category (Spring Boot REST + JPA)
 |
 |-- learnjdbc/                                 Module 1  — Raw JDBC: connect, fetch, CRUD
 |-- basicsofjdbc/                              Module 2  — Logic + JUnit 5: Calculator, Factorial, Palindrome
@@ -308,10 +360,12 @@ java-advanced-workspace/
 |-- mockitotest/                               Module 12 — Mockito: foundational syntax practice
 |-- basicsofspring/                            Module 13 — Spring Core: XML IoC container
 |-- class_level_config_spring/                 Module 14 — Spring Core: @Configuration annotation-based IoC
+|-- basicsofspringboot/                        Module 15 — Spring Boot: REST API + Spring Data JPA
+|-- spring_hibernate/                          Module 16 — Spring + Hibernate Integration
 |
 `-- README.md
 ```
 
 ---
 
-*Java Advanced Training — Capgemini | Updated February 2026*
+*Java Advanced Training — Capgemini | Updated 27 February 2026*
