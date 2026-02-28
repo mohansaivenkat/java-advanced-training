@@ -1,7 +1,6 @@
 package com.product_case_study.controller;
 
 import java.util.List;
-import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -17,7 +16,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.product_case_study.entity.Category;
-import com.product_case_study.exception.CategoryNotFoundException;
 import com.product_case_study.service.CategoryService;
 
 @RestController
@@ -41,17 +39,8 @@ public class CategoryController {
 
 	@GetMapping("/{categoryId}")
 	public ResponseEntity<Category> getCategoryById(@PathVariable Integer categoryId) {
-		Optional<Category> category = categoryService.getCategoryById(categoryId);
-		Category c = null;
-		if(category.isPresent()) {
-			c=category.get();
-			return new ResponseEntity<>(category.get(), HttpStatus.FOUND);
-		}
-		else {
-			throw new CategoryNotFoundException("category not found for id :"+categoryId);
-		}
-		
-		
+		Category category = categoryService.getCategoryById(categoryId);
+		return new ResponseEntity<>(category, HttpStatus.OK);
 	}
 
 	@PutMapping("/{categoryId}")

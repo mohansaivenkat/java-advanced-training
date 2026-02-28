@@ -1,7 +1,6 @@
 package com.product_case_study.service;
 
 import java.util.List;
-import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -27,11 +26,11 @@ public class CategoryService {
 		return categoryRepository.findAll();
 	}
 
-	public Optional<Category> getCategoryById(Integer categoryId) {
-		Optional<Category>category = categoryRepository.findById(categoryId);
-//		if (!category.isPresent()) {
-//			throw new CategoryNotFoundException("category not found with id " + categoryId);
-//		}
+	public Category getCategoryById(Integer categoryId) {
+		Category category = categoryRepository.findById(categoryId).orElse(null);
+		if (category == null) {
+			throw new CategoryNotFoundException("category not found with id " + categoryId);
+		}
 		return category;
 	}
 
