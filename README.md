@@ -4,13 +4,14 @@
 ![Hibernate](https://img.shields.io/badge/Hibernate-5.6-59666C?style=for-the-badge&logo=hibernate&logoColor=white)
 ![Spring](https://img.shields.io/badge/Spring-5.x-6DB33F?style=for-the-badge&logo=spring&logoColor=white)
 ![Spring Boot](https://img.shields.io/badge/Spring_Boot-4.0-6DB33F?style=for-the-badge&logo=springboot&logoColor=white)
+![Spring MVC](https://img.shields.io/badge/Spring_MVC-JSP-6DB33F?style=for-the-badge&logo=spring&logoColor=white)
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-14+-316192?style=for-the-badge&logo=postgresql&logoColor=white)
 ![MySQL](https://img.shields.io/badge/MySQL-8+-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
 ![Maven](https://img.shields.io/badge/Maven-3.6+-C71A36?style=for-the-badge&logo=apachemaven&logoColor=white)
 ![JUnit5](https://img.shields.io/badge/JUnit5-5.11-25A162?style=for-the-badge&logo=junit5&logoColor=white)
 ![Mockito](https://img.shields.io/badge/Mockito-5+-C5D9C8?style=for-the-badge)
 
-A comprehensive collection of Maven projects covering advanced Java concepts — from raw **JDBC** and **JUnit 5** unit testing through **Hibernate ORM**, **JPA entity relationships**, **Hibernate caching**, **Mockito** mocking, **Spring Core** dependency injection, and **Spring Boot** REST API development with **Spring Data JPA**.
+A comprehensive collection of Maven projects covering advanced Java concepts — from raw **JDBC** and **JUnit 5** unit testing through **Hibernate ORM**, **JPA entity relationships**, **Hibernate caching**, **Mockito** mocking, **Spring Core** dependency injection, **Spring Boot** REST API development with **Spring Data JPA**, and **Spring Boot MVC** web applications with JSP views.
 
 ---
 
@@ -34,6 +35,7 @@ Chronological list of all graded assignments, each building on concepts from the
 | **25 Feb 2026** | Online Food Delivery System | `OrderService`, `RestaurantService`, `DeliveryService`, `EmailNotification`, `SmsNotification` — `@Qualifier` constructor injection, `NotificationService` interface | ![Spring](https://img.shields.io/badge/Spring-Core-6DB33F?style=for-the-badge&logo=spring&logoColor=white) ![Java](https://img.shields.io/badge/Java-DI-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white) |
 | **25 Feb 2026** | Banking Loan Approval System | `LoanService`, `LoanValidator`, `CreditScoreValidator`, `IncomeValidator`, `AuditService` — `@Qualifier` + setter injection, validator pattern | ![Spring](https://img.shields.io/badge/Spring-Core-6DB33F?style=for-the-badge&logo=spring&logoColor=white) ![Java](https://img.shields.io/badge/Java-DI-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white) |
 | **26 Feb 2026** | Product & Category Management | `Product`, `Category` — `@OneToMany` JPA relationship, full REST API with `@RestController`, `CategoryService`, `ProductService`, `GlobalExceptionHandler`, pagination and sorting | ![Spring Boot](https://img.shields.io/badge/Spring_Boot-REST_API-6DB33F?style=for-the-badge&logo=springboot&logoColor=white) ![JPA](https://img.shields.io/badge/JPA-Spring_Data-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white) ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-Database-316192?style=for-the-badge&logo=postgresql&logoColor=white) |
+| **28 Feb 2026** | Library Management System | `Book`, `Author`, `Category`, `Member`, `Loan`, `LibraryBranch` — full layered architecture with service interfaces + implementations, 6 REST controllers, `GlobalExceptionHandler`, `ResourceNotFoundException` | ![Spring Boot](https://img.shields.io/badge/Spring_Boot-REST_API-6DB33F?style=for-the-badge&logo=springboot&logoColor=white) ![JPA](https://img.shields.io/badge/JPA-Spring_Data-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white) ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-Database-316192?style=for-the-badge&logo=postgresql&logoColor=white) |
 
 ---
 
@@ -278,6 +280,53 @@ Spring `@Configuration` with JPA `EntityManager` bean — bridging Spring IoC an
 
 ---
 
+### Module 17 — Spring Boot MVC Basics `basicsofspringbootmvc`
+
+![Spring Boot](https://img.shields.io/badge/Spring_Boot-6DB33F?style=flat-square&logo=springboot&logoColor=white)
+![JSP](https://img.shields.io/badge/JSP-Views-ED8B00?style=flat-square&logo=openjdk&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=flat-square&logo=postgresql&logoColor=white)
+
+Introduction to Spring Boot MVC with JSP views — user registration and login flow.
+
+| File | Purpose |
+|:-----|:--------|
+| `DemoController.java` | MVC controller — `/register`, `/create-account`, `/login`, `/logincheck` endpoints |
+| `Users.java` | JPA entity — user model with name, email, contact, password |
+| `UsersJpaRepository.java` | Spring Data JPA repository — `findByEmailAndPassword` |
+| `register.jsp` | Registration form view |
+| `login.jsp` | Login form view |
+| `success.jsp` | Registration success page |
+| `login_success.jsp` | Login success page |
+| `welcome.jsp` | Welcome page with JSTL `c:forEach` |
+
+---
+
+### Module 18 — Spring Boot MVC Advanced `basicsofspringbootmvc2`
+
+![Spring Boot](https://img.shields.io/badge/Spring_Boot-6DB33F?style=flat-square&logo=springboot&logoColor=white)
+![JSP](https://img.shields.io/badge/JSP-Views-ED8B00?style=flat-square&logo=openjdk&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=flat-square&logo=postgresql&logoColor=white)
+
+Advanced Spring Boot MVC with role-based routing (Admin/User), full CRUD via `ModelAndView`, `EmployeeService` layer, and premium glassmorphism UI.
+
+| File | Purpose |
+|:-----|:--------|
+| `EmployeeController.java` | MVC controller — register, login, CRUD operations, role-based routing to admin/user pages |
+| `EmployeeService.java` | Service layer — `createEmployee`, `findByEmailAndPassword`, `deleteByEmail`, `updateByEmail`, `getAdminPage`, `getUserPage` |
+| `Employee.java` | JPA entity — name, salary, role (enum), email (@Id), password |
+| `Role.java` | Enum — `Admin`, `User` |
+| `EmployeeJpaRepository.java` | Spring Data JPA repository — `findByEmailAndPassword` |
+| `register.jsp` | Employee registration form with glassmorphism styling |
+| `login.jsp` | Login form with 3D tilt card effect |
+| `success.jsp` | Registration success with animated checkmark |
+| `exist.jsp` | Duplicate email warning with shake animation |
+| `admin_page.jsp` | Admin dashboard — employee table, SVG icons, animated counters, Edit/Delete actions |
+| `user_page.jsp` | User dashboard — dynamic avatar with user's initial |
+| `update_details.jsp` | Employee update form pre-filled with existing data |
+| `login_success.jsp` | Login success confirmation |
+
+---
+
 ## Technologies Used
 
 | Technology | Purpose | Badge |
@@ -287,6 +336,8 @@ Spring `@Configuration` with JPA `EntityManager` bean — bridging Spring IoC an
 | **JPA 2.1** | Standard annotations: `@Entity`, `@OneToOne`, `@OneToMany`, `@ManyToMany` | ![JPA](https://img.shields.io/badge/JPA-2.1-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white) |
 | **Spring Core 5.x** | IoC container, XML config (`ClassPathXmlApplicationContext`), annotation config (`@Configuration`) | ![Spring](https://img.shields.io/badge/Spring-5.x-6DB33F?style=for-the-badge&logo=spring&logoColor=white) |
 | **Spring Boot 4.0** | REST API development, auto-configuration, Spring Data JPA, exception handling | ![Spring Boot](https://img.shields.io/badge/Spring_Boot-4.0-6DB33F?style=for-the-badge&logo=springboot&logoColor=white) |
+| **Spring MVC** | Model-View-Controller web applications with `ModelAndView`, `@Controller`, role-based routing | ![Spring MVC](https://img.shields.io/badge/Spring_MVC-JSP-6DB33F?style=for-the-badge&logo=spring&logoColor=white) |
+| **JSP + JSTL** | Server-side JSP views with JSTL `c:forEach`, `c:choose` tags and Tomcat Jasper rendering | ![JSP](https://img.shields.io/badge/JSP-JSTL-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white) |
 | **PostgreSQL 14+** | Primary database for Hibernate, JDBC, and Spring Boot modules | ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-14+-316192?style=for-the-badge&logo=postgresql&logoColor=white) |
 | **MySQL 8+** | Database for Case Study and Social Media assignments | ![MySQL](https://img.shields.io/badge/MySQL-8+-4479A1?style=for-the-badge&logo=mysql&logoColor=white) |
 | **Apache Maven 3.6+** | Build tool, dependency management | ![Maven](https://img.shields.io/badge/Maven-3.6+-C71A36?style=for-the-badge&logo=apachemaven&logoColor=white) |
@@ -345,6 +396,7 @@ java-advanced-workspace/
 |-- 25-Feb-Assignment-CaseStudy2-OnlineFoodDeliverySystem/        Assignment — Food Delivery (Spring Core DI)
 |-- 25-Feb-Assignment-CaseStudy3-BankingLoanApprovalSystem/       Assignment — Banking Loan (Spring Core DI)
 |-- 26-Feb-Assignment-CaseStudy-ProductCategoryManagement/        Assignment — Product & Category (Spring Boot REST + JPA)
+|-- 28-Feb-Assignment-LibraryManagementSystem(SpringBoot)/        Assignment — Library Management System (Spring Boot REST + JPA)
 |
 |-- learnjdbc/                                 Module 1  — Raw JDBC: connect, fetch, CRUD
 |-- basicsofjdbc/                              Module 2  — Logic + JUnit 5: Calculator, Factorial, Palindrome
@@ -362,10 +414,12 @@ java-advanced-workspace/
 |-- class_level_config_spring/                 Module 14 — Spring Core: @Configuration annotation-based IoC
 |-- basicsofspringboot/                        Module 15 — Spring Boot: REST API + Spring Data JPA
 |-- spring_hibernate/                          Module 16 — Spring + Hibernate Integration
+|-- basicsofspringbootmvc/                     Module 17 — Spring Boot MVC: User registration + login (JSP)
+|-- basicsofspringbootmvc2/                    Module 18 — Spring Boot MVC Advanced: Role-based CRUD + premium UI
 |
 `-- README.md
 ```
 
 ---
 
-*Java Advanced Training — Capgemini | Updated 27 February 2026*
+*Java Advanced Training — Capgemini | Updated 2 March 2026*
