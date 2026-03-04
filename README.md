@@ -5,13 +5,15 @@
 ![Spring](https://img.shields.io/badge/Spring-5.x-6DB33F?style=for-the-badge&logo=spring&logoColor=white)
 ![Spring Boot](https://img.shields.io/badge/Spring_Boot-4.0-6DB33F?style=for-the-badge&logo=springboot&logoColor=white)
 ![Spring MVC](https://img.shields.io/badge/Spring_MVC-JSP-6DB33F?style=for-the-badge&logo=spring&logoColor=white)
+![Spring Validation](https://img.shields.io/badge/Spring_Validation-Form_Checks-6DB33F?style=for-the-badge&logo=spring&logoColor=white)
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-14+-316192?style=for-the-badge&logo=postgresql&logoColor=white)
 ![MySQL](https://img.shields.io/badge/MySQL-8+-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
+![Redis](https://img.shields.io/badge/Redis-Cache-DC382D?style=for-the-badge&logo=redis&logoColor=white)
 ![Maven](https://img.shields.io/badge/Maven-3.6+-C71A36?style=for-the-badge&logo=apachemaven&logoColor=white)
 ![JUnit5](https://img.shields.io/badge/JUnit5-5.11-25A162?style=for-the-badge&logo=junit5&logoColor=white)
 ![Mockito](https://img.shields.io/badge/Mockito-5+-C5D9C8?style=for-the-badge)
 
-A comprehensive collection of Maven projects covering advanced Java concepts — from raw **JDBC** and **JUnit 5** unit testing through **Hibernate ORM**, **JPA entity relationships**, **Hibernate caching**, **Mockito** mocking, **Spring Core** dependency injection, **Spring Boot** REST API development with **Spring Data JPA**, and **Spring Boot MVC** web applications with JSP views.
+A comprehensive collection of Maven projects covering advanced Java concepts — from raw **JDBC** and **JUnit 5** unit testing through **Hibernate ORM**, **JPA entity relationships**, **Hibernate caching**, **Mockito** mocking, **Spring Core** dependency injection, **Spring Boot** REST API development with **Spring Data JPA**, **DTO mapping patterns**, **Redis caching**, **file upload/download**, **Spring Validation**, and **Spring Boot MVC** web applications with JSP views.
 
 ---
 
@@ -31,11 +33,13 @@ Chronological list of all graded assignments, each building on concepts from the
 | **16 Feb 2026** | Social Media Posts | `Users`, `Post`, `Comments` — `@OneToMany` modelling a social feed | ![Hibernate](https://img.shields.io/badge/Hibernate-ORM-59666C?style=for-the-badge&logo=hibernate&logoColor=white) ![JPA](https://img.shields.io/badge/JPA-%40OneToMany-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white) |
 | **21 Feb 2026** | CRM Sales Management | `Customer`, `Lead`, `SalesEmployee`, `Product`, `Order`, `SupportTicket` — full service-layer with `CustomerService`, `LeadService`, `OrderService`, `TicketService`, `ReportService` | ![Hibernate](https://img.shields.io/badge/Hibernate-ORM-59666C?style=for-the-badge&logo=hibernate&logoColor=white) ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-Database-316192?style=for-the-badge&logo=postgresql&logoColor=white) |
 | **21 Feb 2026** | Hospital Management ERP | `Patient`, `MedicalRecord`, `Department`, `Doctor`, `Appointment`, `Prescription` — **all 5 JPA mapping types** covered across `CRUDTest1` through `CRUDTest5` | ![Hibernate](https://img.shields.io/badge/Hibernate-ORM-59666C?style=for-the-badge&logo=hibernate&logoColor=white) ![JPA](https://img.shields.io/badge/JPA-All_5_Mappings-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white) ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-Database-316192?style=for-the-badge&logo=postgresql&logoColor=white) |
+| **23 Feb 2026** | FinTech Banking System | `Customer`, `BankAccount`, `Transaction`, `Card` — `@OneToOne`, `@ManyToMany` with `@JoinTable`, DAO pattern, interactive console menu, full CRUD for customers, accounts, transactions, and cards | ![Hibernate](https://img.shields.io/badge/Hibernate-ORM-59666C?style=for-the-badge&logo=hibernate&logoColor=white) ![JPA](https://img.shields.io/badge/JPA-All_Mappings-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white) ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-Database-316192?style=for-the-badge&logo=postgresql&logoColor=white) |
 | **25 Feb 2026** | Smart Payment Processing System | `PaymentService`, `CreditCardPayment`, `UpiPayment`, `PaymentProcessor`, `TransactionLogger` — interface-based DI with `@Component`, `@Autowired`, `@Qualifier` | ![Spring](https://img.shields.io/badge/Spring-Core-6DB33F?style=for-the-badge&logo=spring&logoColor=white) ![Java](https://img.shields.io/badge/Java-DI-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white) |
 | **25 Feb 2026** | Online Food Delivery System | `OrderService`, `RestaurantService`, `DeliveryService`, `EmailNotification`, `SmsNotification` — `@Qualifier` constructor injection, `NotificationService` interface | ![Spring](https://img.shields.io/badge/Spring-Core-6DB33F?style=for-the-badge&logo=spring&logoColor=white) ![Java](https://img.shields.io/badge/Java-DI-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white) |
 | **25 Feb 2026** | Banking Loan Approval System | `LoanService`, `LoanValidator`, `CreditScoreValidator`, `IncomeValidator`, `AuditService` — `@Qualifier` + setter injection, validator pattern | ![Spring](https://img.shields.io/badge/Spring-Core-6DB33F?style=for-the-badge&logo=spring&logoColor=white) ![Java](https://img.shields.io/badge/Java-DI-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white) |
 | **26 Feb 2026** | Product & Category Management | `Product`, `Category` — `@OneToMany` JPA relationship, full REST API with `@RestController`, `CategoryService`, `ProductService`, `GlobalExceptionHandler`, pagination and sorting | ![Spring Boot](https://img.shields.io/badge/Spring_Boot-REST_API-6DB33F?style=for-the-badge&logo=springboot&logoColor=white) ![JPA](https://img.shields.io/badge/JPA-Spring_Data-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white) ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-Database-316192?style=for-the-badge&logo=postgresql&logoColor=white) |
 | **28 Feb 2026** | Library Management System | `Book`, `Author`, `Category`, `Member`, `Loan`, `LibraryBranch` — full layered architecture with service interfaces + implementations, 6 REST controllers, `GlobalExceptionHandler`, `ResourceNotFoundException` | ![Spring Boot](https://img.shields.io/badge/Spring_Boot-REST_API-6DB33F?style=for-the-badge&logo=springboot&logoColor=white) ![JPA](https://img.shields.io/badge/JPA-Spring_Data-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white) ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-Database-316192?style=for-the-badge&logo=postgresql&logoColor=white) |
+| **4 Mar 2026** | TaskTrack To-Do Application | `Task` — Spring MVC with JSP views, `TaskController` (6 endpoints), `TaskService` + `TaskServiceImpl`, `TaskRepository`, Spring Form Tags, `@Valid` + `BindingResult`, image upload/download with `MultipartFile` + `@Lob`, JSTL `c:forEach`/`c:choose`, priority and status badges | ![Spring Boot](https://img.shields.io/badge/Spring_Boot-MVC-6DB33F?style=for-the-badge&logo=springboot&logoColor=white) ![JSP](https://img.shields.io/badge/JSP-JSTL-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white) ![Spring Validation](https://img.shields.io/badge/Validation-Form_Checks-6DB33F?style=for-the-badge&logo=spring&logoColor=white) ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-Database-316192?style=for-the-badge&logo=postgresql&logoColor=white) |
 
 ---
 
@@ -327,6 +331,51 @@ Advanced Spring Boot MVC with role-based routing (Admin/User), full CRUD via `Mo
 
 ---
 
+### Module 19 -- Spring Boot DTO Mapping `basicsofspringbootmapping`
+
+![Spring Boot](https://img.shields.io/badge/Spring_Boot-6DB33F?style=flat-square&logo=springboot&logoColor=white)
+![Spring Validation](https://img.shields.io/badge/Spring_Validation-6DB33F?style=flat-square&logo=spring&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=flat-square&logo=postgresql&logoColor=white)
+
+REST API development using the DTO (Data Transfer Object) pattern with manual mapper classes for entity-DTO conversion. Includes Spring Validation with `@NotBlank` and `@Pattern`.
+
+| File | Purpose |
+|:-----|:--------|
+| `Product.java` | JPA entity -- id, name, costPrice, sellingPrice |
+| `ProductDto.java` | DTO -- exposes name, costPrice, sellingPrice (hides id) |
+| `ProductMapper.java` | Manual mapper -- `toEntity()` and `toDto()` static methods |
+| `ProductController.java` | REST controller -- create, findById, findAll (all via DTOs) |
+| `ProductService.java` | Service layer -- converts between entity and DTO using mapper |
+| `ProductJpaRepository.java` | Spring Data JPA repository |
+| `Student.java` | JPA entity -- id, name, college, marks, gender, email, phone with `@NotBlank` + `@Pattern` validation |
+| `StudentDto.java` | DTO for Student |
+| `StudentMapper.java` | Manual mapper for Student entity-DTO conversion |
+| `StudentController.java` | REST controller -- create with `@Valid`, findById, findAll |
+| `StudentService.java` | Service layer for Student |
+| `StudentJpaRepository.java` | Spring Data JPA repository for Student |
+
+---
+
+### Module 20 -- Spring Boot Redis Cache and File Upload `basicsofrediscache`
+
+![Spring Boot](https://img.shields.io/badge/Spring_Boot-6DB33F?style=flat-square&logo=springboot&logoColor=white)
+![Redis](https://img.shields.io/badge/Redis-DC382D?style=flat-square&logo=redis&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=flat-square&logo=postgresql&logoColor=white)
+
+Spring Boot application with Redis caching via `spring-boot-starter-data-redis` and `spring-boot-starter-cache`. Also includes binary file upload/download stored in the database using `@Lob` and `MultipartFile`.
+
+| File | Purpose |
+|:-----|:--------|
+| `Product.java` | JPA entity -- product with basic fields |
+| `ProductController.java` | REST controller -- create product, find by ID |
+| `ProductService.java` | Service layer with caching support |
+| `ProductJpaRepository.java` | Spring Data JPA repository |
+| `FileData.java` | JPA entity -- id, filename, fileType, data (`@Lob byte[]`) for storing uploaded files |
+| `FileDataController.java` | REST controller -- `/files/upload` (multipart), `/files/download/{id}` (serves bytes with correct Content-Type) |
+| `FileDataJpaRepository.java` | Spring Data JPA repository for FileData |
+
+---
+
 ## Technologies Used
 
 | Technology | Purpose | Badge |
@@ -337,9 +386,11 @@ Advanced Spring Boot MVC with role-based routing (Admin/User), full CRUD via `Mo
 | **Spring Core 5.x** | IoC container, XML config (`ClassPathXmlApplicationContext`), annotation config (`@Configuration`) | ![Spring](https://img.shields.io/badge/Spring-5.x-6DB33F?style=for-the-badge&logo=spring&logoColor=white) |
 | **Spring Boot 4.0** | REST API development, auto-configuration, Spring Data JPA, exception handling | ![Spring Boot](https://img.shields.io/badge/Spring_Boot-4.0-6DB33F?style=for-the-badge&logo=springboot&logoColor=white) |
 | **Spring MVC** | Model-View-Controller web applications with `ModelAndView`, `@Controller`, role-based routing | ![Spring MVC](https://img.shields.io/badge/Spring_MVC-JSP-6DB33F?style=for-the-badge&logo=spring&logoColor=white) |
-| **JSP + JSTL** | Server-side JSP views with JSTL `c:forEach`, `c:choose` tags and Tomcat Jasper rendering | ![JSP](https://img.shields.io/badge/JSP-JSTL-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white) |
+| **Spring Validation** | Bean validation with `@NotBlank`, `@NotNull`, `@Size`, `@Pattern`, `@Valid` + `BindingResult` | ![Validation](https://img.shields.io/badge/Spring_Validation-Form_Checks-6DB33F?style=for-the-badge&logo=spring&logoColor=white) |
+| **JSP + JSTL** | Server-side JSP views with JSTL `c:forEach`, `c:choose` tags, Spring Form Tag Library, and Tomcat Jasper rendering | ![JSP](https://img.shields.io/badge/JSP-JSTL-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white) |
 | **PostgreSQL 14+** | Primary database for Hibernate, JDBC, and Spring Boot modules | ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-14+-316192?style=for-the-badge&logo=postgresql&logoColor=white) |
 | **MySQL 8+** | Database for Case Study and Social Media assignments | ![MySQL](https://img.shields.io/badge/MySQL-8+-4479A1?style=for-the-badge&logo=mysql&logoColor=white) |
+| **Redis** | Distributed cache via `spring-boot-starter-data-redis` + `spring-boot-starter-cache` | ![Redis](https://img.shields.io/badge/Redis-Cache-DC382D?style=for-the-badge&logo=redis&logoColor=white) |
 | **Apache Maven 3.6+** | Build tool, dependency management | ![Maven](https://img.shields.io/badge/Maven-3.6+-C71A36?style=for-the-badge&logo=apachemaven&logoColor=white) |
 | **JUnit 5** | Unit testing framework | ![JUnit5](https://img.shields.io/badge/JUnit5-5.11-25A162?style=for-the-badge&logo=junit5&logoColor=white) |
 | **Mockito 5+** | Mock objects for service-layer testing | ![Mockito](https://img.shields.io/badge/Mockito-5+-C5D9C8?style=for-the-badge) |
@@ -395,8 +446,10 @@ java-advanced-workspace/
 |-- 25-Feb-Assignment-CaseStudy1-SmartPaymentProcessingSystem/    Assignment — Smart Payment (Spring Core DI)
 |-- 25-Feb-Assignment-CaseStudy2-OnlineFoodDeliverySystem/        Assignment — Food Delivery (Spring Core DI)
 |-- 25-Feb-Assignment-CaseStudy3-BankingLoanApprovalSystem/       Assignment — Banking Loan (Spring Core DI)
+|-- 23-Feb-Assignment-FinTechHibernateJPA/                        Assignment — FinTech Banking System (Hibernate + JPA)
 |-- 26-Feb-Assignment-CaseStudy-ProductCategoryManagement/        Assignment — Product & Category (Spring Boot REST + JPA)
 |-- 28-Feb-Assignment-LibraryManagementSystem(SpringBoot)/        Assignment — Library Management System (Spring Boot REST + JPA)
+|-- 4-Mar-Assignment-ToDoApplication/                             Assignment — TaskTrack To-Do (Spring MVC + JSP + Validation + Image Upload)
 |
 |-- learnjdbc/                                 Module 1  — Raw JDBC: connect, fetch, CRUD
 |-- basicsofjdbc/                              Module 2  — Logic + JUnit 5: Calculator, Factorial, Palindrome
@@ -416,10 +469,12 @@ java-advanced-workspace/
 |-- spring_hibernate/                          Module 16 — Spring + Hibernate Integration
 |-- basicsofspringbootmvc/                     Module 17 — Spring Boot MVC: User registration + login (JSP)
 |-- basicsofspringbootmvc2/                    Module 18 — Spring Boot MVC Advanced: Role-based CRUD + premium UI
+|-- basicsofspringbootmapping/                 Module 19 — Spring Boot DTO Mapping: Product + Student with DTOs
+|-- basicsofrediscache/                        Module 20 — Spring Boot Redis Cache + File Upload/Download
 |
 `-- README.md
 ```
 
 ---
 
-*Java Advanced Training — Capgemini | Updated 2 March 2026*
+*Java Advanced Training -- Capgemini | Updated 4 March 2026*
