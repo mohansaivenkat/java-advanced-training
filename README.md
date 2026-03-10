@@ -40,6 +40,9 @@ Chronological list of all graded assignments, each building on concepts from the
 | **26 Feb 2026** | Product & Category Management | `Product`, `Category` — `@OneToMany` JPA relationship, full REST API with `@RestController`, `CategoryService`, `ProductService`, `GlobalExceptionHandler`, pagination and sorting | ![Spring Boot](https://img.shields.io/badge/Spring_Boot-REST_API-6DB33F?style=for-the-badge&logo=springboot&logoColor=white) ![JPA](https://img.shields.io/badge/JPA-Spring_Data-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white) ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-Database-316192?style=for-the-badge&logo=postgresql&logoColor=white) |
 | **28 Feb 2026** | Library Management System | `Book`, `Author`, `Category`, `Member`, `Loan`, `LibraryBranch` — full layered architecture with service interfaces + implementations, 6 REST controllers, `GlobalExceptionHandler`, `ResourceNotFoundException` | ![Spring Boot](https://img.shields.io/badge/Spring_Boot-REST_API-6DB33F?style=for-the-badge&logo=springboot&logoColor=white) ![JPA](https://img.shields.io/badge/JPA-Spring_Data-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white) ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-Database-316192?style=for-the-badge&logo=postgresql&logoColor=white) |
 | **4 Mar 2026** | TaskTrack To-Do Application | `Task` — Spring MVC with JSP views, `TaskController` (6 endpoints), `TaskService` + `TaskServiceImpl`, `TaskRepository`, Spring Form Tags, `@Valid` + `BindingResult`, image upload/download with `MultipartFile` + `@Lob`, JSTL `c:forEach`/`c:choose`, priority and status badges | ![Spring Boot](https://img.shields.io/badge/Spring_Boot-MVC-6DB33F?style=for-the-badge&logo=springboot&logoColor=white) ![JSP](https://img.shields.io/badge/JSP-JSTL-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white) ![Spring Validation](https://img.shields.io/badge/Validation-Form_Checks-6DB33F?style=for-the-badge&logo=spring&logoColor=white) ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-Database-316192?style=for-the-badge&logo=postgresql&logoColor=white) |
+| **6 Mar 2026** | Event Management System | `Event`, `EventType`, `Status` — Spring Boot REST API, Basic Authentication, JPA mappings, Actuator monitoring | ![Spring Boot](https://img.shields.io/badge/Spring_Boot-REST_API-6DB33F?style=for-the-badge&logo=springboot&logoColor=white) ![Spring Security](https://img.shields.io/badge/Spring_Security-Auth-6DB33F?style=for-the-badge&logo=springsecurity&logoColor=white) ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-Database-316192?style=for-the-badge&logo=postgresql&logoColor=white) |
+| **7 Mar 2026** | User Book Borrow (Library) | `User`, `Book`, `BorrowRecord` — Spring Boot REST, Basic Auth, `@PostAuthorize`, Swagger/OpenAPI documentation, H2 Database | ![Spring Boot](https://img.shields.io/badge/Spring_Boot-REST_API-6DB33F?style=for-the-badge&logo=springboot&logoColor=white) ![Spring Security](https://img.shields.io/badge/Spring_Security-Auth-6DB33F?style=for-the-badge&logo=springsecurity&logoColor=white) ![Swagger](https://img.shields.io/badge/Swagger-OpenAPI-85EA2D?style=for-the-badge&logo=swagger&logoColor=black) |
+| **9 Mar 2026** | Student Management System | `Student`, `User` — REST API, Method-level Security, Role-Based Auth `@PreAuthorize`, Pagination, Spring Cache, `MultipartFile` upload/download for BLOBs, Actuator | ![Spring Boot](https://img.shields.io/badge/Spring_Boot-REST_API-6DB33F?style=for-the-badge&logo=springboot&logoColor=white) ![Spring Security](https://img.shields.io/badge/Spring_Security-Auth-6DB33F?style=for-the-badge&logo=springsecurity&logoColor=white) ![Java](https://img.shields.io/badge/Spring_Cache-Cacheable-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white) |
 
 ---
 
@@ -376,6 +379,37 @@ Spring Boot application with Redis caching via `spring-boot-starter-data-redis` 
 
 ---
 
+### Module 21 -- Spring Security Basics (In-Memory) `basicsofspringsecurity`
+
+![Spring Boot](https://img.shields.io/badge/Spring_Boot-6DB33F?style=flat-square&logo=springboot&logoColor=white)
+![Spring Security](https://img.shields.io/badge/Spring_Security-6DB33F?style=flat-square&logo=springsecurity&logoColor=white)
+
+Basic setup of Spring Security implementing in-memory authentication using `InMemoryUserDetailsManager`.
+
+| File | Purpose |
+|:-----|:--------|
+| `SecurityConfig.java` | Spring Security configuration with `SecurityFilterChain` mapping basic Auth routing (`/admin` access). |
+| `PracticeController.java` | Testing REST Controller evaluating roles mapping permissions |
+
+---
+
+### Module 22 -- Spring Security Database Authentication `basicsofspringsecuritydatabaseconnection`
+
+![Spring Boot](https://img.shields.io/badge/Spring_Boot-6DB33F?style=flat-square&logo=springboot&logoColor=white)
+![Spring Security](https://img.shields.io/badge/Spring_Security-6DB33F?style=flat-square&logo=springsecurity&logoColor=white)
+![Swagger](https://img.shields.io/badge/Swagger-OpenAPI-85EA2D?style=flat-square&logo=swagger&logoColor=black)
+
+Spring Security mapping with dynamic authentication loading profiles directly onto `BCryptPasswordEncoder` validations, integrating `CookieCsrfTokenRepository`, and incorporating global `@EnableMethodSecurity`.
+
+| File | Purpose |
+|:-----|:--------|
+| `Account.java` | JPA entity modeling account details, mapped natively against the credentials |
+| `SecurityConfig.java` | Boot configuration maintaining `.requestMatchers(...)` alongside global CSRF implementations |
+| `DbDetailsUserService.java` | Implementation hooking native auth handling linking User Details to the specific Repository checks |
+| `PracticeController.java` & `AccountController.java` | Validates security permissions and role routing over `AccountRequestDTO` testing profiles |
+
+---
+
 ## Technologies Used
 
 | Technology | Purpose | Badge |
@@ -450,6 +484,9 @@ java-advanced-workspace/
 |-- 26-Feb-Assignment-CaseStudy-ProductCategoryManagement/        Assignment — Product & Category (Spring Boot REST + JPA)
 |-- 28-Feb-Assignment-LibraryManagementSystem(SpringBoot)/        Assignment — Library Management System (Spring Boot REST + JPA)
 |-- 4-Mar-Assignment-ToDoApplication/                             Assignment — TaskTrack To-Do (Spring MVC + JSP + Validation + Image Upload)
+|-- 6-Mar-Assignment-EventManagementSystem/                       Assignment — Event Management System (Spring Boot REST + Security + Actuator)
+|-- 7-Mar-Assignment-UserBookBorrow/                              Assignment — User Book Borrow (Spring Boot REST + Security + Swagger/OpenAPI)
+|-- 9-Mar-Assignment-StudentManagementSystem/                     Assignment — Student Management System (Spring Boot REST + Security + Pagination + Uploads)
 |
 |-- learnjdbc/                                 Module 1  — Raw JDBC: connect, fetch, CRUD
 |-- basicsofjdbc/                              Module 2  — Logic + JUnit 5: Calculator, Factorial, Palindrome
@@ -471,10 +508,12 @@ java-advanced-workspace/
 |-- basicsofspringbootmvc2/                    Module 18 — Spring Boot MVC Advanced: Role-based CRUD + premium UI
 |-- basicsofspringbootmapping/                 Module 19 — Spring Boot DTO Mapping: Product + Student with DTOs
 |-- basicsofrediscache/                        Module 20 — Spring Boot Redis Cache + File Upload/Download
+|-- basicsofspringsecurity/                    Module 21 — Spring Security Basics (In-Memory Auth)
+|-- basicsofspringsecuritydatabaseconnection/  Module 22 — Spring Security Database Authentication
 |
 `-- README.md
 ```
 
 ---
 
-*Java Advanced Training -- Capgemini | Updated 4 March 2026*
+*Java Advanced Training -- Capgemini | Updated 10 March 2026*
